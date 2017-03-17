@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<logger name="org.mybatis" level="debug" additivity="false">
+		<appender-ref ref="logfile" />
+		<appender-ref ref="stdout" />
+	</logger>
+	<logger name="org.springframework" level="info" additivity="false">
+		<appender-ref ref="stdout" />
+	</logger>
+
+	<!-- jdbc -->
+	<logger name="org.springframework.jdbc.core.JdbcTemplate"
+		additivity="false" level="INFO">
+		<appender-ref ref="stdout" />
+	</logger>
+	<logger
+		name="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate"
+		additivity="false" level="DEBUG">
+		<appender-ref ref="stdout" />
+	</logger>
+	<logger name="org.springframework.jdbc.core.StatementCreatorUtils"
+		additivity="false" level="INFO">
+		<appender-ref ref="stdout" />
+	</logger>
+	<root>
+		<level value="info" />
+		<appender-ref ref="stdout" />
+		<appender-ref ref="logfile" />
+	</root>
+</configuration>
