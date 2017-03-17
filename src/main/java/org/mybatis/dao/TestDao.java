@@ -1,5 +1,9 @@
 package org.mybatis.dao;
 
-public class TestDao {
+import org.mybatis.entity.TestEntity;
+
+public interface TestDao {
+
+	public TestEntity selectOne(int id) ;
 
 }

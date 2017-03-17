@@ -3,9 +3,13 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="org.mybatis.dao.TestDao">
-	<resultMap type="org.mybatis.entity.Test"  id="test">
+	<resultMap type="org.mybatis.entity.TestEntity"  id="test">
 		<result property="id" column="id" />
 		<result property="version" column="version" />
 		<result property="name" column="name" />
 	</resultMap>
+	
+	<select id="selectOne" parameterType="Integer" resultMap="test">
+		select * from test where id = #{id} limit 1
+	</select>
 </mapper>
