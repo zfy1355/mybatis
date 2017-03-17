@@ -14,6 +14,12 @@ public class TestServiceImpl implements TestService{
 	
 	public TestEntity selectOne(int id){
 		return dao.selectOne(id);
+	}
+
+	@Override
+	public TestEntity selectOne2(int id) {
+		// TODO Auto-generated method stub
+		return dao.selectOne2(id);
 	};
 
 }

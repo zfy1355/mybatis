@@ -17,5 +17,11 @@ public class TestServiceTest extends AbstractSpringTest{
 		TestEntity test = service.selectOne(1);
 		Assert.assertNotNull(test);
 	}
+	
+	@Test
+	public void  testSelectOne2(){
+		TestEntity test = service.selectOne2(1);
+		Assert.assertNotNull(test);
+	}
 
 }
